@@ -66,11 +66,11 @@ function homeView() {
 			{
 				type: "actions",
 				elements: [
-					button("\u2705 Check In", "checkin", "primary"),
-					button("\u2615 Take Break", "break_start"),
-					button("\ud83d Back", "break_end"),
-					button("\ud83d In Meeting", "meeting"),
-					button("\ud83c Check Out", "checkout", "danger"),
+					button("✅ Check In", "checkin", "primary"),
+					button("☕ Take Break", "break_start"),
+					button("🔙 Back", "break_end"),
+					button("📞 In Meeting", "meeting"),
+					button("🏁 Check Out", "checkout", "danger"),
 				],
 			},
 		],
@@ -93,7 +93,7 @@ async function recordAction(
 		timestampIso: now.toISOString(),
 		localTime,
 	})
-	return `*${action}* logged at *${localTime}* \u2705`
+	return `*${action}* logged at *${localTime}* ✅`
 }
 
 export default {
