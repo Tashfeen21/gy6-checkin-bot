@@ -1,0 +1,16 @@
+name = "gy6-checkin-bot"
+main = "src/index.ts"
+compatibility_date = "2024-09-09"
+
+[vars]
+TZ_DEFAULT = "Asia/Dhaka"
+
+# Secrets (set with: npx wrangler secret put NAME) - never commit real values:
+#   SLACK_SIGNING_SECRET
+#   SLACK_BOT_TOKEN
+#   NOTION_TOKEN
+#   NOTION_ATTENDANCE_DB_ID
+#
+# Phase 3 (reminders / auto-checkout) - enable later:
+# [triggers]
+# crons = ["*/15 * * * *"]

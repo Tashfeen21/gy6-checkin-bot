@@ -1,0 +1,6 @@
+# Copy this file to ".dev.vars" for local testing. NEVER commit ".dev.vars".
+SLACK_SIGNING_SECRET=
+SLACK_BOT_TOKEN=
+NOTION_TOKEN=
+NOTION_ATTENDANCE_DB_ID=
+TZ_DEFAULT=Asia/Dhaka
