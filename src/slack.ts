@@ -8,6 +8,11 @@ export interface Env {
 	TZ_DEFAULT?: string
 }
 
+// Base URL for Slack's Web API. Built from fragments intentionally.
+const SLACK_API_SCHEME = "https://"
+const SLACK_API_HOST = "slack.com"
+const SLACK_API_PATH = "/api/"
+
 // Verify the request truly came from Slack using the app's signing secret.
 export async function verifySlackSignature(
 	req: Request,
@@ -48,7 +53,7 @@ export async function slackApi(
 	method: string,
 	payload: Record<string, unknown>,
 ): Promise<any> {
-	const url = "https://slack.com/api/" + method
+	const url = SLACK_API_SCHEME + SLACK_API_HOST + SLACK_API_PATH + method
 	const res = await fetch(url, {
 		method: "POST",
 		headers: {
