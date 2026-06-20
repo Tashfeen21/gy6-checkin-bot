@@ -48,7 +48,7 @@ export async function slackApi(
 	method: string,
 	payload: Record<string, unknown>,
 ): Promise<any> {
-	const res = await fetch(`https://slack.com/api/${method}`, {
+	const res = await fetch("https://slack.com/api/" + method, {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json; charset=utf-8",
